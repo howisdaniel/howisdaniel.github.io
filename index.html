@@ -3,42 +3,6 @@ layout: default
 ---
 
 <div class="status">
-    {% assign p = site.posts.first %}
-    <h1 class="title">{{p.title}}</h1>
-    <div class="gh">
-        <h3 class="title">GitHub Work</h3>
-        <p>Daniel pushed <strong>{{p.github.commits}}</strong> commits for <strong>{{p.github.repos}}</strong> different projects</p>
-    </div>
-    <div class="social">
-        <h3 class="title">Social Media Analysis</h3>
-        <p>Higher scores indicate more positive posts, lower scores indicate more negative posts</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <td><strong>Social Media</strong></td>
-                    <td><strong>Posts</strong></td>
-                    <td><strong>Sentiment Score</strong></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Twitter</td>
-                    <td>{{p.twitter.tweets}}</td>
-                    <td>{{p.twitter.sentiment}}</td>
-                </tr>
-                <tr>
-                    <td>Facebook</td>
-                    <td>{{p.facebook.posts}}</td>
-                    <td>{{p.facebook.sentiment}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-  <h1 class="page-heading">Older Updates:</h1>
-    {% for post in site.posts %}
-      <div>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%b %-d, %Y" }}</a>
-      </div>
-    {% endfor %}
+    Under construction.
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 </div>
