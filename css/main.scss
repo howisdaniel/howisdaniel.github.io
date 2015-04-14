@@ -7,6 +7,7 @@ html, body {
     font-family: 'Droid Sans', sans-serif;
     width:100%;
     margin:0 auto;
+    cursor:default;
 }
 
 table {
@@ -26,7 +27,10 @@ td {
     text-align: center;
 }
 
-.status {
+.centered {
     text-align: center;
 }
 
+a, a:visited {
+    color:#0000EE;
+}
