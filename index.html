@@ -5,13 +5,14 @@ layout: default
 <div class="centered">
     {% assign p = site.posts.first %}
     <h1 class="title">{{p.title}}</h1>
-    <div class="gh">
-        <h3 class="title">GitHub Work</h3>
-        <p>Daniel pushed <strong>{{p.github.commits}}</strong> commits for <strong>{{p.github.repos}}</strong> different projects</p>
+    <div class="block">
+        <img src={{p.instagram.url}}>
     </div>
-    <div class="social">
+
+    <div class="block">
         <h3 class="title">Social Media Analysis</h3>
         <p>Higher scores indicate more positive posts, lower scores indicate more negative posts</p>
+        <p>GitHub "posts" are commits / repository</p>
         <table class="table">
             <thead>
                 <tr>
@@ -24,12 +25,17 @@ layout: default
                 <tr>
                     <td>Twitter</td>
                     <td>{{p.twitter.tweets}}</td>
-                    <td>{{p.twitter.sentiment}}</td>
+                    <td>{{p.twitter.mean}}</td>
                 </tr>
                 <tr>
                     <td>Facebook</td>
                     <td>{{p.facebook.posts}}</td>
-                    <td>{{p.facebook.sentiment}}</td>
+                    <td>{{p.facebook.mean}}</td>
+                </tr>
+                <tr>
+                    <td>GitHub</td>
+                    <td>{{p.github.commits}} / {{p.github.repos}}</td>
+                    <td>{{p.github.sentiment}}</td>
                 </tr>
             </tbody>
         </table>
