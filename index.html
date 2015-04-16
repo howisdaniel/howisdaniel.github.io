@@ -4,43 +4,15 @@ layout: default
 
 <div class="centered">
     {% assign p = site.posts.first %}
-    <h1 class="title">{{p.title}}</h1>
-    <p><a href="/about">what is this</a></p>
+    <span class="title">Daniel Bartel is doing <span class="underlined">{{p.summary.feeling}}</span> and is <span class="underlined">{{p.summary.busyLevel}}</span></span>
+    <span class="meta">
+        <a href="{{ /p.url | prepend: site.baseurl }}">view full report</a> -
+        <a href="/about">what is this</a>
+    </span>
     <div class="block">
-        <img src={{p.instagram.url}}>
+        <img src={{p.instagram.url}}> 
     </div>
-
-    <div class="block">
-        <h3 class="title">Social Media Analysis</h3>
-        <p>Higher scores indicate more positive posts, lower scores indicate more negative posts</p>
-        <p>GitHub "posts" are commits / repository</p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <td><strong>Social Media</strong></td>
-                    <td><strong>Posts</strong></td>
-                    <td><strong>Sentiment Score</strong></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Twitter</td>
-                    <td>{{p.twitter.tweets}}</td>
-                    <td>{{p.twitter.mean}}</td>
-                </tr>
-                <tr>
-                    <td>Facebook</td>
-                    <td>{{p.facebook.posts}}</td>
-                    <td>{{p.facebook.mean}}</td>
-                </tr>
-                <tr>
-                    <td>GitHub</td>
-                    <td>{{p.github.commits}} / {{p.github.repos}}</td>
-                    <td>{{p.github.sentiment}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    
   <h1 class="page-heading">Older Updates:</h1>
     {% for post in site.posts %}
       <div>
