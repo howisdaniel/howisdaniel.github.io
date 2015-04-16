@@ -1,37 +1,48 @@
 ---
 layout: default
 ---
+
 <div class="centered">
-    <div class="post">
-        <h1 class="title">{{p.title}}</h1>
-        <div class="gh">
-            <h3 class="title">GitHub Work</h3>
-            <p>Daniel pushed <strong>{{page.github.commits}}</strong> commits for <strong>{{page.github.repos}}</strong> different projects</p>
-        </div>
-        <div class="social">
-            <h3 class="title">Social Media Analysis</h3>
-            <p>Higher scores indicate more positive posts, lower scores indicate more negative posts</p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <td><strong>Social Media</strong></td>
-                        <td><strong>Posts</strong></td>
-                        <td><strong>Sentiment Score</strong></td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Twitter</td>
-                        <td>{{page.twitter.tweets}}</td>
-                        <td>{{page.twitter.sentiment}}</td>
-                    </tr>
-                    <tr>
-                        <td>Facebook</td>
-                        <td>{{page.facebook.posts}}</td>
-                        <td>{{page.facebook.sentiment}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <h1>{{page.title}}</h1>
+    <p>Higher sentiment scores indicate more positive posts, lower scores indicate more negative posts</p>
+    <p>For GitHub, the first number is the amount of code commits, and the second is the number of repositories pushed to.</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <td><strong>Social Media</strong></td>
+                <td><strong>Posts</strong></td>
+                <td><strong>Sentiment Score</strong></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Twitter</td>
+                <td>{{page.twitter.tweets}}</td>
+                <td>{{page.twitter.mean}}</td>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>{{page.facebook.posts}}</td>
+                <td>{{page.facebook.mean}}</td>
+            </tr>
+            <tr>
+                <td>GitHub</td>
+                <td>{{page.github.commits}} / {{page.github.repos}}</td>
+                <td>{{page.github.sentiment}}</td>
+            </tr>
+            <tr>
+                <td>
+                    Total
+                </td>
+                <td>
+                    {{page.summary.totalPosts}}
+                </td>
+                <td> {{page.summary.averageScore}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>{{page.tasks.total_tasks}} tasks were set today at <a href="http://howisdaniel.github.io/tasks">daniel-task</a>.</p>
+    <p>{{page.tasks.completed_tasks}} were completed.</p>
+    
 </div>
