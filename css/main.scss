@@ -24,7 +24,7 @@ td {
 }
 
 .title {
-    text-align: center;
+    font-size:3.2em;
 }
 
 .centered {
@@ -35,8 +35,10 @@ a, a:visited {
     color:#0000EE;
 }
 
-.block {
-
+.meta {
+    display:block;
+    padding:2em;
+    font-size:2.5em;
 }
 
 .about {
@@ -47,4 +49,8 @@ a, a:visited {
 
 li {
     list-style: square;
+}
+
+.underlined {
+    text-decoration: underline;
 }
